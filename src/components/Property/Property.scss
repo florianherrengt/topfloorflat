@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.Property {
+    background-color: $color-primary;
+
+    &_Button {
+        background-color: green;
+
+        &:hover {
+            background-color: blue;
+        }
+    }
+}
