@@ -7,6 +7,10 @@ describe('Components/Property', () => {
         const property: PropertyProps['property'] = {
             id: 'f',
             summary: 'df',
+            imageUrl: '',
+            websiteUrl: '',
+            description: 'dsfs',
+            region: ''
         };
         const { getByText, findByText, queryByText } = render(
             <Property property={property} />,

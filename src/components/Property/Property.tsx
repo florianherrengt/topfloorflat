@@ -8,6 +8,10 @@ export interface PropertyProps extends Partial<PropertyState> {
     property: {
         id: string;
         summary: string;
+        imageUrl: string;
+        description: string;
+        websiteUrl: string;
+        region: string;
     };
 }
 
@@ -21,14 +25,19 @@ export class Property extends React.Component<PropertyProps, PropertyState> {
     };
     render() {
         return (
-            <div className='Property'>
-                My Property<div>{this.props.property.summary}</div>
-                <button
-                    onClick={this.toggleShowPrice.bind(this)}
-                    className='Property_Button'
-                >
-                    Show price
-                </button>
+            <div className='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
+                <div className="col-auto d-none d-lg-block align-items-center">
+                    <img className="thumbnail" src={this.props.property.imageUrl} />
+                </div>
+                <div className="col p-4 d-flex flex-column position-static">
+                    <div className="card-text mb-auto">
+                        {this.props.property.summary}
+                    </div>
+                    <div className="d-flex">   
+                        <a href={this.props.property.websiteUrl} className="mr-md-auto">Learn more</a>
+                        <div className="my-2 my-md-0 mr-md-3">{'#'+this.props.property.region}</div>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -1,7 +1,7 @@
-import { GetPropertyAction } from './actions';
+import { GetPropertyAction, Property } from './actions';
 
 export interface PropertyState {
-    properties: Array<{ id: string; summary: string }>;
+    properties: Array<Property>;
     loading: boolean;
     error: string | null;
 }

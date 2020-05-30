@@ -1,9 +1,13 @@
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from '../..';
 
-interface Property {
+export interface Property {
     id: string;
     summary: string;
+    description: string;
+    imageUrl: string;
+    websiteUrl: string;
+    region: string;
 }
 
 interface GetPropertyRequest {
@@ -40,7 +44,7 @@ export const getProperties = (
     });
     try {
         const request = await fetch(
-            'http://localhost:8080/search/' + options.terms,
+            'https://topfloorflat.herokuapp.com/search/' + options.terms,
         );
         const data = await request.json();
         dispatch({

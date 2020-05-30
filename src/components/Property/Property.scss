@@ -1,13 +1,17 @@
-@import '../../styles/variables';
+// @import '../../styles/variables';
 
-.Property {
-    background-color: $color-primary;
+// .Property {
+//     background-color: $color-primary;
 
-    &_Button {
-        background-color: green;
+//     &_Button {
+//         background-color: green;
 
-        &:hover {
-            background-color: blue;
-        }
-    }
+//         &:hover {
+//             background-color: blue;
+//         }
+//     }
+// }
+
+.thumbnail {
+    max-height: 250px;
 }

@@ -10,6 +10,10 @@ export default {
 const property: PropertyProps['property'] = {
     id: 'f',
     summary: 'df',
+    imageUrl: '',
+    description: '',
+    websiteUrl: '',
+    region: ''
 };
 
 export const Default = () => (

@@ -1,1 +1,2 @@
-export * from './PropertiesPage';
+import './PropertiesPageConnected.scss';
+export * from './PropertiesPageConnected';
