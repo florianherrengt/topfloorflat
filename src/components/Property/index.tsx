@@ -1,2 +1,2 @@
 import './Property.scss';
-export * from './Property';
+export * from './PropertyCard';

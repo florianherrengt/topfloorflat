@@ -1,15 +1,16 @@
 import React from 'react';
-import { Property } from '../Property';
+import { PropertyCard } from '../Property';
+import { Property } from '../../redux/properties/actions';
 
 interface PropertiesPage {
-    properties: Array<{ id: string; summary: string; imageUrl: string; description:string, websiteUrl: string, region:string }>;
+    properties: Array<Property>;
 }
 
 export const PropertiesPage: React.FunctionComponent<PropertiesPage> = props => {
     return (
         <div>
             {props.properties.map(property => (
-                <Property key={Math.random().toString()} property={property} />
+                <PropertyCard key={Math.random().toString()} property={property} />
             ))}
         </div>
     );

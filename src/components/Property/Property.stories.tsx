@@ -1,9 +1,9 @@
 import '../../styles/index.scss';
 import React from 'react';
-import { Property, PropertyProps } from '.';
+import { PropertyCard, PropertyProps } from '.';
 
 export default {
-    component: Property,
+    component: PropertyCard,
     title: 'Property',
 };
 
@@ -18,12 +18,12 @@ const property: PropertyProps['property'] = {
 
 export const Default = () => (
     <div style={{ padding: 20 }}>
-        <Property property={property} />
+        <PropertyCard property={property} />
     </div>
 );
 
 export const ShowingPrice = () => (
     <div style={{ padding: 20 }}>
-        <Property property={property} showPrice />
+        <PropertyCard property={property} showPrice />
     </div>
 );

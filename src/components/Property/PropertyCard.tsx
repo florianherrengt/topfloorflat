@@ -1,21 +1,15 @@
 import React from 'react';
+import { Property } from '../../redux/properties/actions';
 
 interface PropertyState {
     showPrice: boolean;
 }
 
 export interface PropertyProps extends Partial<PropertyState> {
-    property: {
-        id: string;
-        summary: string;
-        imageUrl: string;
-        description: string;
-        websiteUrl: string;
-        region: string;
-    };
+    property: Property;
 }
 
-export class Property extends React.Component<PropertyProps, PropertyState> {
+export class PropertyCard extends React.Component<PropertyProps, PropertyState> {
     constructor(props: PropertyProps) {
         super(props);
         this.state = { showPrice: this.props.showPrice || false };

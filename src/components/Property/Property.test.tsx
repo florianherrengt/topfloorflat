@@ -1,5 +1,5 @@
 import React from 'react';
-import { Property, PropertyProps } from './Property';
+import { PropertyCard, PropertyProps } from './PropertyCard';
 import { render, fireEvent } from '@testing-library/react';
 
 describe('Components/Property', () => {
@@ -13,7 +13,7 @@ describe('Components/Property', () => {
             region: ''
         };
         const { getByText, findByText, queryByText } = render(
-            <Property property={property} />,
+            <PropertyCard property={property} />,
         );
 
         fireEvent.click(getByText('Show price'));
