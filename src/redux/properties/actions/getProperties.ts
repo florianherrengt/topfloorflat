@@ -8,6 +8,8 @@ export interface Property {
     imageUrl: string;
     websiteUrl: string;
     region: string;
+    price: string;
+    title: string;
 }
 
 interface GetPropertyRequest {
@@ -44,7 +46,7 @@ export const getProperties = (
     });
     try {
         const request = await fetch(
-            'https://topfloorflat.herokuapp.com/search/' + options.terms,
+            'https://topfloorflat.com/search/' + options.terms,
         );
         const data = await request.json();
         dispatch({

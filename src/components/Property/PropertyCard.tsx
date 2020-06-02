@@ -24,12 +24,13 @@ export class PropertyCard extends React.Component<PropertyProps, PropertyState> 
                     <img className="thumbnail" src={this.props.property.imageUrl} />
                 </div>
                 <div className="col p-4 d-flex flex-column position-static">
+                    <h4 className="mb-0">{this.props.property.title}</h4>
                     <div className="card-text mb-auto">
                         {this.props.property.summary}
                     </div>
                     <div className="d-flex">   
                         <a href={this.props.property.websiteUrl} className="mr-md-auto">Learn more</a>
-                        <div className="my-2 my-md-0 mr-md-3">{'#'+this.props.property.region}</div>
+                        <div className="my-2 my-md-0 mr-md-3">{this.props.property.price}</div>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,9 @@ describe('Components/Property', () => {
             imageUrl: '',
             websiteUrl: '',
             description: 'dsfs',
-            region: ''
+            region: '',
+            price: '',
+            title: 'title'
         };
         const { getByText, findByText, queryByText } = render(
             <PropertyCard property={property} />,

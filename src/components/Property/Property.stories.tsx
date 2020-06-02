@@ -13,7 +13,9 @@ const property: PropertyProps['property'] = {
     imageUrl: '',
     description: '',
     websiteUrl: '',
-    region: ''
+    region: '',
+    price: '',
+    title: 'title'
 };
 
 export const Default = () => (
