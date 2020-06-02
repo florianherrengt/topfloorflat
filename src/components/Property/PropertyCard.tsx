@@ -44,17 +44,6 @@ export class PropertyCard extends React.Component<
                         <div className='my-2 my-md-0 mr-md-3'>
                             {this.props.property.price}
                         </div>
-                        <div
-                            style={{
-                                backgroundColor: 'yellow',
-                                display: 'flex',
-                            }}
-                        >
-                            <div style={{ backgroundColor: 'red', flex: 1 }}>
-                                A
-                            </div>
-                            <div style={{ backgroundColor: 'blue' }}>B</div>
-                        </div>
                     </div>
                 </div>
             </div>
