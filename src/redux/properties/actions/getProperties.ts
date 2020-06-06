@@ -45,7 +45,9 @@ export const getProperties = (
         type: 'GET_PROPERTY_REQUEST',
     });
     try {
-        const request = await fetch('/search/' + options.terms);
+        const request = await fetch(
+            'https://topfloorflat.com/search/' + options.terms,
+        );
         const data = await request.json();
         dispatch({
             type: 'GET_PROPERTY_SUCCESS',

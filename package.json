@@ -6,6 +6,7 @@
     "scripts": {
         "storybook": "start-storybook -p 6006 -s ./public",
         "build-storybook": "build-storybook",
+        "build": "cross-env NODE_ENV=production webpack",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -21,8 +22,11 @@
         "@types/react-redux": "^7.1.9",
         "@types/react-router": "^5.1.7",
         "@types/react-router-dom": "^5.1.5",
+        "@types/throttle-debounce": "^2.1.0",
         "babel-loader": "^8.1.0",
         "css-loader": "^3.5.3",
+        "handlebars": "^4.7.6",
+        "handlebars-loader": "^1.7.1",
         "history": "^4.10.1",
         "html-webpack-plugin": "^4.3.0",
         "jest": "^26.0.1",
@@ -37,6 +41,7 @@
         "sass-loader": "^8.0.2",
         "storybook": "^5.3.19",
         "style-loader": "^1.2.1",
+        "throttle-debounce": "^2.1.0",
         "ts-jest": "^26.0.0",
         "ts-loader": "^7.0.5",
         "typescript": "^3.9.3",
@@ -44,6 +49,7 @@
         "webpack-dev-server": "^3.11.0"
     },
     "devDependencies": {
+        "cross-env": "^7.0.2",
         "redux-devtools": "^3.5.0",
         "webpack-cli": "^3.3.11"
     }

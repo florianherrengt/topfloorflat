@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+const environment = process.env.NODE_ENV || 'development';
+
 module.exports = {
     mode: 'development',
     entry: './src/index.tsx',
@@ -12,13 +14,17 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    externals: {
-        react: 'React',
-        'react-dom': 'ReactDOM',
-    },
+    externals:
+        environment === 'development'
+            ? {
+                  react: 'React',
+                  'react-dom': 'ReactDOM',
+              }
+            : {},
     devtool: 'inline-source-map',
     module: {
         rules: [
+            { test: /\.hbs$/, loader: 'handlebars-loader' },
             {
                 test: [/\.ts$/, /\.tsx$/],
                 use: 'ts-loader',
@@ -47,7 +53,13 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            template: 'src/index.hbs',
+            title: 'Top Floor Flat',
+            hash: true,
+            templateParameters: {
+                isDevelopment: environment === 'development',
+                isProduction: environment === 'production',
+            },
         }),
     ],
 };

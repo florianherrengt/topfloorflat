@@ -22,27 +22,33 @@ export class PropertyCard extends React.Component<
     };
     render() {
         return (
-            <div className='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
-                <div className='col-auto d-none d-lg-block align-items-center'>
-                    <img
-                        className='thumbnail'
-                        src={this.props.property.imageUrl}
-                    />
-                </div>
-                <div className='col p-4 d-flex flex-column position-static'>
-                    <h4 className='mb-0'>{this.props.property.title}</h4>
-                    <div className='card-text mb-auto'>
-                        {this.props.property.summary}
+            <div className='card mb-3 shadow'>
+                <div className='row no-gutters'>
+                    <div className='col-md-4'>
+                        <img
+                            src={this.props.property.imageUrl}
+                            className='card-img'
+                        />
                     </div>
-                    <div className='d-flex'>
-                        <a
-                            href={this.props.property.websiteUrl}
-                            className='mr-auto'
-                        >
-                            Learn more
-                        </a>
-                        <div className='my-2 my-md-0 mr-md-3'>
-                            {this.props.property.price}
+                    <div className='col-md-8'>
+                        <div className='card-body'>
+                            <h4 className='mb-0'>
+                                {this.props.property.title}
+                            </h4>
+                            <div className='card-text mb-auto'>
+                                {this.props.property.summary}
+                            </div>
+                            <div className='d-flex'>
+                                <a
+                                    href={this.props.property.websiteUrl}
+                                    className='mr-auto'
+                                >
+                                    Learn more
+                                </a>
+                                <div className='my-2 my-md-0 mr-md-3'>
+                                    {this.props.property.price}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
